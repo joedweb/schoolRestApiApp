@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserDetailsService {
-    //we do not have a UserService because UserDetailsService is an interface that has it already. We juts need to bring our implmenetation
+
 
     private final UserRepository userRepository;
 
@@ -28,7 +28,6 @@ public class UserServiceImpl implements UserDetailsService {
 
         if(user.isPresent()){
             User currentUser = user.get();
-            //it's from user details so we need to build it (as seen on Security/securityConfig)
             builder = org
                     .springframework
                     .security

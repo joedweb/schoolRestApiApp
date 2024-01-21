@@ -22,7 +22,7 @@ public class LoginController {
     private JwtService jwtService;
 
 
-    @PostMapping("/login")                  //sending credential so it's Post
+    @PostMapping("/login")
     public ResponseEntity<?> getToken(@RequestBody AccountCredentials credentials){
 
         UsernamePasswordAuthenticationToken creds = new UsernamePasswordAuthenticationToken(credentials.getUsername(),credentials.getPassword());
